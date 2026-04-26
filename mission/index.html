@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Statement</title>
+    <style>
+        body {
+            text-align: center;
+            line-height: 2em;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            color: royalblue;
+            font-size: small;
+        }
+        section {
+            max-width: 600px;
+            text-align: left;
+            margin: auto;
+        }
+        img {
+            width: 100px;
+        }
+    </style>
+    <script>
+        //Lol, I didn't know you'd actually be here reading my code. I assumed you'd just look and see if the page looks good.
+        //Anyways, I just wanted to let you know I'm already super good at Javascript, and I'm really here to learn the best practices of the industry.
+        //So, just to illustrate my point, I've got a script that'll run if you click the byui logo or navigate to #hello
+        //When you grade this assigment, you should totally comment and let me know if you saw this :)
+
+        window.addEventListener('hashchange',() => {
+          const page = window.location.hash.replace('#','')
+          if (page=='hello'){
+            alert('Hey! Nice to see you actually clicked it!')
+            alert("Normally I would have this open a menu or something, but I'm not trying to put THAT much work into this.")
+          }
+        })
+    </script>
+</head>
+<body>
+    <h1>MISSION STATEMENT</h1>
+    <h2>BRIGHAM YOUNG UNIVERSITY IDAHO</h2>
+    <section><hr>
+    <p>Brigham Young University-Idaho was founded and is supported and guided by The Church of Jesus Christ of Latter-day Saints. Its mission is to develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities.</p>
+        <p><i>The university does this by:</i></p>
+        <ol>
+            <li>Building testimonies of the restored gospel of Jesus Christ and fostering its principles in a wholesome academic, cultural, and social environment.</li>
+            <li>Providing a high-quality education that prepares students of diverse interests and abilities for lifelong learning and employment.</li>
+            <li>Serving as many students as possible within resource constraints.</li>
+            <li>Delivering education that is affordable for students and the Church.</li>
+        </ol>
+    </section>
+    <a href="#hello"><img src="images\byui-logo-blue.webp" alt="BYU-Idaho Logo"></a>
+</body>
+</html>
