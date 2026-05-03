@@ -9,7 +9,7 @@ let selectElem = document.querySelector('select');
                 document.getElementById('logo').src = "https://wddbyui.github.io/wdd131/images/byui-logo-white.png"
                 document.body.style.color = 'white'
                 document.body.style.backgroundColor = 'black'
-                document.body.style.textShadow = '0px 0px 3px white'
+                document.body.style.textShadow = '0px 0px 2px white'
                 document.querySelector('h2').style.textShadow = '0px 0px 5px #5555FF'
             }  else if (current == 'dark') {
                 document.getElementById('logo').src = "https://wddbyui.github.io/wdd131/images/byui-logo-white.png"
