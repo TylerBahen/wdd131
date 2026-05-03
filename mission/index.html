@@ -6,46 +6,16 @@
     <meta name="description" content="Just a project for WDD 131">
     <meta name="author" content="Tyler Bahen">
     <title>Mission Statement</title>
-    <style>
-        body {
-            text-align: center;
-            line-height: 2em;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        h2 {
-            text-align: center;
-            color: royalblue;
-            font-size: small;
-        }
-        section {
-            max-width: 600px;
-            text-align: left;
-            margin: auto;
-        }
-        img {
-            width: 100px;
-        }
-    </style>
-    <script>
-        //Lol, I didn't know you'd actually be here reading my code. I assumed you'd just look and see if the page looks good.
-        //Anyways, I just wanted to let you know I'm already super good at Javascript, and I'm really here to learn the best practices of the industry.
-        //So, just to illustrate my point, I've got a script that'll run if you click the byui logo or navigate to #hello
-        //When you grade this assigment, you should totally comment and let me know if you saw this :)
-
-        window.addEventListener('hashchange',() => {
-          const page = window.location.hash.replace('#','')
-          if (page=='hello'){
-            alert('Hey! Nice to see you actually clicked it!')
-            alert("Normally I would have this open a menu or something, but I'm not trying to put THAT much work into this.")
-          }
-        })
-    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="optionswrapper">
+    <select>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="glow">Glow</option>
+    </select>
+    </div>                            
     <h1>MISSION STATEMENT</h1>
     <h2>BRIGHAM YOUNG UNIVERSITY IDAHO</h2>
     <section><hr>
@@ -58,6 +28,7 @@
             <li>Delivering education that is affordable for students and the Church.</li>
         </ol>
     </section>
-    <a href="#hello"><img src="images\byui-logo-blue.webp" alt="BYU-Idaho Logo"></a>
+    <img id="logo" src="images\byui-logo-blue.webp" alt="BYU-Idaho Logo">
+    <script src="script.js"></script>
 </body>
 </html>

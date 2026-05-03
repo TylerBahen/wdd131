@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    line-height: 2em;
+    margin: 0px;
+    padding: 0px;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    color: royalblue;
+    font-size: small;
+}
+section {
+    max-width: 600px;
+    text-align: left;
+    margin: auto;
+}
+img {
+    width: 100px;
+}
+#optionswrapper {
+    text-align: left;
+}
