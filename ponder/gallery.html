@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+h1 {
+    text-align: center;
+    margin: 35px 0;
+}
+.gallery {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+figure img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 5px 5px 15px black;
+    display: block;
+    margin: 0 auto;
+}
+/* modal */
+
+dialog img {
+    margin: 0;
+    width: 90%;
+    display: block;
+    margin: 20vh auto;
+}
+dialog {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+}
+.close-viewer {
+    position: absolute;
+    top: 10vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+}
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    dialog img {
+        width: 60%;
+        margin: 15vh auto;
+    }
+    .close-viewer {
+        position: absolute;
+        right: 15vh;
+    }
+    .viewer {
+        margin: 50px;
+        padding: 50px;
+    }
+    .viewer img {
+        max-width: 800px;
+    }
+}
+          
+    </style>
+</head>
+<body>
+    <h1>Gallery</h1>
+<section class="gallery">
+    <figure>  
+        <img src="images/book-sm.jpg" alt="person reading a book">
+    </figure>
+    <figure>  
+        <img src="images/couch-sm.jpg" alt="person sitting on a couch with a phone">
+    </figure>
+    <figure>  
+        <img src="images/desk-sm.jpg" alt="a work desktop">
+    </figure>
+    <figure>  
+        <img src="images/keyboard-sm.jpg" alt="person typing on a keyboard">
+    </figure>
+    <figure>  
+        <img src="images/phone-sm.jpg" alt="person looking at a phone">
+    </figure>
+    <figure>  
+        <img src="images/sit-sm.jpg" alt="person sitting on a couch">
+    </figure>
+</section>
+<dialog>
+    <img>
+    <button class="close-viewer">X</button>
+</dialog>
+<script>
+    
+const gallery = document.querySelector('.gallery');
+const modal = document.querySelector('dialog');
+const modalImage = modal.querySelector('img');
+const closeButton = modal.querySelector('.close-viewer');
+
+// Event listener for opening the modal
+gallery.addEventListener('click', openModal);
+
+function openModal(e) {
+    
+    modalImage.src = e.srcElement.currentSrc
+    modal.show()
+    modalImage.show()
+    closeButton.show()
+}
+// Close modal on button click
+closeButton.addEventListener('click', () => {
+    modal.close();
+});
+
+// Close modal if clicking outside the image
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.close();
+    }
+});
+          
+</script>
+</body>
+</html>
