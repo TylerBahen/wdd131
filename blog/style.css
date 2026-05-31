@@ -29,7 +29,6 @@ header a {
 
 .book {
     padding: 30px;
-    border-top: 3px solid orange;
     border-bottom: 3px solid orange;
     width: calc(100% - 60px);
     display: grid;
@@ -60,26 +59,25 @@ footer {
     position: static;
     height: 5ch;
     padding-top: 2ch;
-    margin-top: 6ch;
     bottom: 0;
     width: 100%;
     text-align: center;
-    border-top: 3px solid orange;
     background-color: white;
 }
 
 @media (min-width: 700px){
     .book {
         grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr 500px 1fr;
         place-items: left;
         align-items: left;
-        height: 50vh;
     }
 
     .details {
         grid-row: 1/4;
         grid-column: 1/2;
         height: 100%;
+        width: 80%;
         border-right: 3px solid orange;
     }
 
