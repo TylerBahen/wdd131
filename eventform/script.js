@@ -5,9 +5,13 @@ document.getElementById('type').addEventListener('change', (event) => {
     studentDiv.style.display = 'none';
     guestDiv.style.display = 'none';
 
-    if (value == 'student') {
-        studentDiv.style.display = 'block';
-    } else if (value == 'guest') {
-        guestDiv.style.display = 'block';
+    if (element.value == 'student') {
+        studentDiv.style.display = 'grid';
+    } else if (element.value == 'guest') {
+        guestDiv.style.display = 'grid';
     }
+})
+
+document.querySelector('form').addEventListener('submit', (event) => {
+    event.preventDefault()
 })
