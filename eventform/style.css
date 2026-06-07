@@ -1,0 +1,40 @@
+body {
+    background-color: aliceblue;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:5px 20px;
+    width: 500px;
+    max-width: 100%;
+    height: fit-content;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+form * {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+select, input, button {
+    border: solid 1px black;
+    border-radius: 3px;
+}
+
+.wide {
+    grid-column: 1/3;
+}
+
+#studentDiv, #guestDiv {
+    display: none;
+}

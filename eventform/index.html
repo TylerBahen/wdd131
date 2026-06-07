@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <h1 class="wide">Event Ticket</h1>
+        <label for="firstname">First Name:</label>
+        <label for="lastname">Last Name:</label>
+        <input name='firstname' id='firstname' type="text">
+        <input name='lastname' type="text" id="lastname">
+        <label for="email" class="wide">Email:</label>
+        <input name='email' type="email" id="email" class="wide">
+        <label for="type">Type:</label>
+        <label for="date">Event Date:</label>
+        <select name="type" id="type">
+            <option value="none">--Select One--</option>
+            <option value="student">Student</option>
+            <option value="guest">Guest</option>
+        </select>
+        <input type="date" name="date" id="date">
+        <span class="wide"></span>
+        <button type="submit" class="wide">Submit</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
