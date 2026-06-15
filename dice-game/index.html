@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="game.js" defer></script>
+    <title>Dice John</title>
     <style>
         body {
             display: flex;
@@ -49,17 +48,46 @@
 </head>
 <body>
     <div id="gameboard">
-        <img class="dice1" src="assets/white_dice_1.gif">
-        <img class="dice2" src="assets/white_dice_2.gif">
-        <img class="dice3" src="assets/white_dice_3.gif">
-        <img class="dice4" src="assets/white_dice_4.gif">
-        <img class="dice5" src="assets/white_dice_5.gif">
-        <input type="checkbox" class="dice1" value="1">
-        <input type="checkbox" class="dice2" value="2">
-        <input type="checkbox" class="dice3" value="3">
-        <input type="checkbox" class="dice4" value="4">
-        <input type="checkbox" class="dice5" value="5">
+        <img class="dice1" src="assets/die_rolling.gif">
+        <img class="dice2" src="assets/die_rolling.gif">
+        <img class="dice3" src="assets/die_rolling.gif">
+        <img class="dice4" src="assets/die_rolling.gif">
+        <img class="dice5" src="assets/die_rolling.gif">
+        <input type="checkbox" class="dice1" value="none" onclick="boxCheck(1)">
+        <input type="checkbox" class="dice2" value="none" onclick="boxCheck(2)">
+        <input type="checkbox" class="dice3" value="none" onclick="boxCheck(3)">
+        <input type="checkbox" class="dice4" value="none" onclick="boxCheck(4)">
+        <input type="checkbox" class="dice5" value="none" onclick="boxCheck(5)">
     </div>
-    <button id="rollButton">Roll!</button>
+    <button id="rollButton" onclick="roll()">Roll!</button>
+    <script>
+        function roll(){
+            const dice = ['.dice1','.dice2','.dice3','.dice4','.dice5']
+            dice.forEach(selector => {
+                const box = document.querySelector('input'+selector)
+                if (!box.checked){
+                    const result = getNum()
+                    document.querySelector('img'+selector).src = result[1]
+                    box.value = result[0]
+                    box.checked = true
+                }
+            })
+        }
+
+        function boxCheck(num){
+            const box = document.querySelector(`input.dice${num}`)
+            if(!box.checked){
+                document.querySelector(`img.dice${num}`).src = "assets/die_rolling.gif"
+                box.value = 'none'
+            } else if (box.value=='none'){
+                box.checked = false
+            }
+        }
+
+        function getNum(){
+            const randomNum = Math.ceil(Math.random()*6)
+            return [randomNum,`assets/white_dice_${randomNum}.gif`]
+        }
+    </script>
 </body>
 </html>
