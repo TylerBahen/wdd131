@@ -2,6 +2,93 @@ img {
     width: 100px;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content:center;
+    align-items: center;
+}
+
+h1 {
+    font-size:50px;
+}
+
 header img {
     width: 100px;
+    height: 100px;
+}
+
+footer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer img {
+    width: 20px;
+}
+
+.tags {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.tags p {
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 2px black;
+    margin: 0;
+}
+
+.recipe-card {
+    margin: auto;
+    width: 95%;
+    border: solid black 3px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-card img {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.recipe-details {
+    padding: 20px;
+}
+
+h2 {
+    color: #00AAFF;
+    font-size: xx-large;
+    margin-bottom: 0;
+}
+
+@media (min-width: 800px) {
+    .recipe-card {
+        flex-direction: row;
+    }
+    .recipe-card img {
+        width: 50%;
+    }
+    footer {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 800px){
+    .description {
+        display: none;
+    }
 }
