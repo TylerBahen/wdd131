@@ -15,6 +15,46 @@ header {
     align-items: center;
 }
 
+#searchbar {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin: auto;
+    justify-content:center;
+    align-items: center;
+    border: solid 3px black;
+    border-radius: 10px;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+#search {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    border: none;
+}
+
+#searchBtn {
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    margin:0;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    border: none;
+    background-color: white;
+    border-left: solid 1px black;
+    padding-left: 5px;
+}
+
+#searchBtn img {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+
 h1 {
     font-size:50px;
 }
@@ -51,6 +91,7 @@ footer img {
 }
 
 .recipe-card {
+    box-sizing: border-box;
     margin: auto;
     width: 95%;
     border: solid black 3px;
