@@ -85,7 +85,7 @@ footer img {
     gap: 20px;
 }
 
-.tags p {
+.tags span {
     background-color: lightgray;
     padding: 10px;
     border-radius: 5px;
@@ -101,6 +101,7 @@ footer img {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .recipe-card img {
