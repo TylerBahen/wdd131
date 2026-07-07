@@ -328,4 +328,4 @@ function search(){
     displayResults(results)
 }
 
-displayResults(recipes)
+displayResults([recipes[Math.floor(Math.random()*recipes.length)]])
